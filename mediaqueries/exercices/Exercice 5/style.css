@@ -16,7 +16,8 @@ ul {
 
 li {
   border: none;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
 }
 
 li a {
@@ -35,8 +36,9 @@ li a:hover {
 }
 
 #container div {
-	display: inline-block;
-	width: 30%;
+  display: flex;
+  flex-direction: column;
+	width: 100%;
 }
 	
 footer {
@@ -52,23 +54,18 @@ footer {
 
 
 /*Media queries - à vous re refactoriser le code pour que la page soit mobile first */
-@media screen and (min-width : 480px){
 
- 
-}
 
-@media screen and (max-width: 480px){
-  #container{
-    display: flex;
-    flex-direction: column;
-    }
+@media screen and (min-width: 480px){
+  
 
   #container div {
-    width:100%;
+    width:30%;
+    display: inline-block;
   }
 
 
-  li { display:flex;
-    flex-direction: column;
+  li { display:inline-block;
+    
     }
 }
